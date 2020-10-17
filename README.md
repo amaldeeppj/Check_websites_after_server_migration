@@ -1,4 +1,4 @@
 # Check_websites_after_server_migration
-Script to check whether sites are loading same as before IP switch during the server migration
+Script to check whether sites are loading same as before IP switch during the server migration. This script is designed for `cPanel` servers.
 
 Make sure both these scripts are executed in the new server. Use `bash` instead of `sh` while executing from the commandline, because there are functions that don't support by sh. Also, you may try using proper shebang in the script. The first script `download_index_files.sh` is to download the index pages of the sites hosted on the old server and this should be executed just before the IP switch. The second script `verify_index_files.sh` should be executed once the IP switch is complete. The second script will download the index files of the websites after the IP switch and will compare them to the files that were downloaded before the IP switch and will generate a list of domains that load properly after migration. Please let me know if you have any questions.
